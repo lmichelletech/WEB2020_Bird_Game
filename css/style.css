@@ -1,0 +1,129 @@
+body{
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.bg{
+    background: url("../images/sky.jpg") 0 0 repeat;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    animation: flying 8s linear infinite;
+    z-index: 0;
+}
+
+
+@keyframes flying {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -2000px 0;
+    }
+
+}
+
+.result, .rsg{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 100;
+    text-transform: uppercase;
+    font-size: 100px;
+}
+
+.bird{
+    background: url("../images/birds.png") 0 0 no-repeat;
+    position: absolute;
+    width: 144px;
+    height: 72px;
+    overflow: hidden;
+    animation: start 1s steps(4) infinite alternate; 
+    /* go 10s linear infinite; */
+    top: 46vh;
+    left: 4vw;
+    position: absolute;
+    margin: 0 auto;
+    z-index: 99;
+}
+
+@keyframes start {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 0 -288px;
+    }
+
+}
+
+/* @keyframes go {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: 1600px;
+    }
+
+} */
+
+.flag{
+    position: absolute;
+    width: 190px;
+    height: 175px;
+    top: 10px;
+    right: 10px;
+    z-index: 4;
+}
+
+.flag img{
+    width: 50%;
+    height: auto;
+    overflow: hidden;
+}
+
+.timer{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-size: 26px;
+    color: black;
+    z-index: 99;
+}
+
+.reset-btn{
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.reset-btn:hover{
+    color: rgb(24, 75, 35);
+}
+
+.line{
+    height: 100%;
+    width:3px;
+    top: 0;
+    right: 250px;
+    background-color: black;
+    position: absolute;
+    z-index: 999;
+}
+
+.hide{
+    display: none;
+}
+
+.joke{
+    font-size: 14px;
+}
